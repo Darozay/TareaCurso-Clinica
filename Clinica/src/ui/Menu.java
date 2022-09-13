@@ -12,7 +12,7 @@ public class Menu implements IMenu{
     @Override
     public void Menu(){
         System.out.println("_________________________________________________________________________________");
-        System.out.print("1.Especialidades\n2.Salir\nEscoja la opcion deseada: ");
+        System.out.print("1.Contratar servicion\n2.Salir\nEscoja la opcion deseada: ");
     }
     
     @Override
@@ -38,6 +38,7 @@ public class Menu implements IMenu{
         while(!"2".equals(opc));
     }
     public String getPaciente(){
+        if("".equals(v))return "No hizo uso de ningun servicio";
         return Condicional.Ficha("\n"+v+"\nDeuda= "+cont);
     }
 }

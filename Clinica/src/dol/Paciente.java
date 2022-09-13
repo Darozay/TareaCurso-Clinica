@@ -1,24 +1,19 @@
 package dol;
 
-import java.util.Random;
+import misc.Condicional;
+import misc.DateOperator;
 
 public class Paciente extends Persona implements IShow{
-
-    private int numeroPaciente;
     
     public Paciente() {
         super();
     }
-    public void setNumeroPaciente(int i){
-        numeroPaciente=i;
-    }
-    public String getExpediente(){
-        Random a=new Random();
-        char b=(char)(a.nextInt(26)+'a');
-        return numeroPaciente+""+b;
+    public String getExpediente(boolean expediente, String string){
+        if(expediente==true)return string;
+        else return Condicional.ValoresAleatorios();
     }
     @Override
     public String Show(){
-        return toString()+"Numero del paciente= "+numeroPaciente+"\nExpediente= "+getExpediente();
+        return toString()+"\nFecha Actual="+DateOperator.FechaActual();
     }
 }

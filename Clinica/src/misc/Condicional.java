@@ -1,6 +1,10 @@
 package misc;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Condicional {
     public static String Ordenador(Servicio Array[]){
@@ -32,6 +36,54 @@ public class Condicional {
         return b+a.get(Integer.parseInt(i)-1)+b;
         }catch(Exception e){
             return e.getMessage();
+        }
+    }
+    public static String ValoresAleatorios(){
+        String almacen="";
+        for(int i=0;i<8;i++){
+            if(i%2==0)almacen=almacen+(int)Math.floor(Math.random()*9);
+            else{
+                Random a=new Random();
+                almacen=almacen+(char)(a.nextInt(26)+'A');
+            }
+        }
+        return almacen;
+    }
+    public static void MostrarTxt(String string){
+        if(".txt".equals(ComprobanteTxt(string))){
+        StringBuilder sb=new StringBuilder(string);
+        sb.delete(string.length()-4, string.length());
+        string=sb.toString();
+        }
+        String almacen="",a;
+        try{
+         BufferedReader bw = new BufferedReader(new FileReader(string+".txt"));
+         while((a=bw.readLine())!=null){
+             almacen=almacen+a+"\n";
+         }
+            System.out.println(almacen);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    public static String Direccion(){
+        File Archivo=new File("src");
+        String a=Archivo.getAbsolutePath();
+        StringBuilder sb = new StringBuilder(a);
+        sb.delete(a.length()-4, a.length());
+        return sb.toString();
+    }
+    public static String ComprobanteTxt(String string){
+        StringBuilder sb=new StringBuilder(string);
+        sb.delete(0, 8);
+        return sb.toString();
+    }
+    public static void EliminarTxt(String string){
+        File archivo=new File(string+".txt");
+        if(!archivo.exists())System.out.println("El expediente que usted ingreso no existe");
+        else{
+            archivo.delete();
+            System.out.println("Se borro el expediente "+string+" exitosamente");
         }
     }
 }

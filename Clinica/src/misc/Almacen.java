@@ -4,64 +4,46 @@
  */
 package misc;
 
-import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.PrintWriter;
 
 /**
  *
  * @author HP
  */
 public class Almacen {
-    public static void Paciente(String string){
-        File archivo=new File("usuario.txt");
-        FileWriter escribir;
-        PrintWriter linea;
+    public static void Paciente(String string,String Archivo){
+        File archivo=new File(Archivo+".txt");
         if(!archivo.exists()){
-        try{
-            archivo.createNewFile();
-            escribir=new FileWriter(archivo,true);
-            linea=new PrintWriter(escribir);
-            linea.println(string);
-            linea.close();
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        }else{
             try{
-            escribir=new FileWriter(archivo,true);
-            linea=new PrintWriter(escribir);
-            linea.println(string);
-            linea.close();
+            archivo.createNewFile();
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
         }
-    }
-    public static void leer(){
-        File archivo;
-        FileReader leer;
-        BufferedReader almacen;
-        String cadena;
-        archivo=new File("usuario.txt");
         try{
-            leer=new FileReader(archivo);
-            almacen=new BufferedReader(leer);
-            cadena="";
-            while(cadena!=null){
-                try{
-                    cadena=almacen.readLine();
-                    if(cadena!=null){
-                        System.out.println(cadena);
-                    }
-                }catch(Exception e){
-                    System.out.println(e.getMessage());
-                }
-            }
+        BufferedWriter bw = new BufferedWriter(new FileWriter(Archivo+".txt"));
+            bw.write(string);
+            bw.close();
         }catch(Exception e){
             System.out.println(e.getMessage());
+        }
+    }
+    public static void EditarPaciente(String string,String Archivo){
+        File archivo=new File(Archivo+".txt");
+        if(!archivo.exists())System.out.println("No existe el expediente para editar");
+        else{
+            try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter(Archivo+".txt"));
+            bw.write("");
+            bw.close();
+            BufferedWriter p = new BufferedWriter(new FileWriter(Archivo+".txt"));
+            p.write(string);
+            p.close();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
         }
     }
 }

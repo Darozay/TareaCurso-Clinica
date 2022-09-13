@@ -9,6 +9,7 @@ public class Registro {
     Scanner sc=new Scanner(System.in);
     private String dia,mes,año;
     Menu b=new Menu();
+    String Expediente;
     
     private void registroFecha(){
         System.out.println("_________________________________________________________________________________");
@@ -36,9 +37,12 @@ public class Registro {
         }while("Ingrese un genero valido\nMaculino\nFemenino".equals(a.getGenero()));
     }
     public String getPaciente(){
-        return a.Show()+"\n"+b.getPaciente();
+        return a.Show()+"\nExpediente="+Expediente+"\n"+b.getPaciente();
     }
-    public void registroPersona(int i){
+    public String getExpediente(){
+        return Expediente;
+    }
+    public void registroPersona(String expediente,boolean existe){
         System.out.println("_________________________________________________________________________________");
         System.out.print("Ingrese el primer nombre: ");
         a.setpNombre(sc.next());
@@ -56,7 +60,7 @@ public class Registro {
         a.setDNI(sc.next());
         
         registroFecha();
-        a.setNumeroPaciente(i);
+        Expediente=a.getExpediente(existe,expediente);
         registroGenero();
         b.showMenu();
     }

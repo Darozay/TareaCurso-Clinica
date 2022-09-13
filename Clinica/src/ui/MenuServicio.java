@@ -32,6 +32,7 @@ public class MenuServicio implements IMenu {
         do {
             Menu();
             opc=sc.next();
+            System.out.println("_________________________________________________________________________________");
             if (null == opc) {
                 System.out.println("Ingrese una opcion valida");
             } else {

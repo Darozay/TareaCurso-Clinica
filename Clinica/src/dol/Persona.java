@@ -59,6 +59,6 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Nombre="+pNombre+" "+sNombre+" "+pApellido+" "+sApellido+"\nDNI="+DNI+"\ngenero="+genero+"\n"+Edad()+"\nFecha de nacimiento="+Fecha(dia,mes,año)+"\n";
+        return "Nombre="+pNombre+" "+sNombre+" "+pApellido+" "+sApellido+"\nDNI="+DNI+"\ngenero="+genero+"\n"+Edad()+"\nFecha de nacimiento="+Fecha(dia,mes,año);
     }
 }
