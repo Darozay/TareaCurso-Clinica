@@ -1,5 +1,5 @@
 package misc;
-
+    
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -57,7 +57,8 @@ public class Condicional {
         }
         String almacen="",a;
         try{
-         BufferedReader bw = new BufferedReader(new FileReader(string+".txt"));
+         File archivo=new File(Direccion(),string+".txt");
+         BufferedReader bw = new BufferedReader(new FileReader(archivo));
          while((a=bw.readLine())!=null){
              almacen=almacen+a+"\n";
          }
@@ -67,11 +68,8 @@ public class Condicional {
         }
     }
     public static String Direccion(){
-        File Archivo=new File("src");
-        String a=Archivo.getAbsolutePath();
-        StringBuilder sb = new StringBuilder(a);
-        sb.delete(a.length()-4, a.length());
-        return sb.toString();
+        File Archivo=new File("Archivador");
+        return Archivo.getAbsolutePath();
     }
     public static String ComprobanteTxt(String string){
         StringBuilder sb=new StringBuilder(string);
@@ -79,11 +77,12 @@ public class Condicional {
         return sb.toString();
     }
     public static void EliminarTxt(String string){
-        File archivo=new File(string+".txt");
+        File archivo=new File(Direccion(),string+".txt");
         if(!archivo.exists())System.out.println("El expediente que usted ingreso no existe");
         else{
             archivo.delete();
             System.out.println("Se borro el expediente "+string+" exitosamente");
         }
     }
+    
 }

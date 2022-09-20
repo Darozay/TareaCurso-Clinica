@@ -4,10 +4,6 @@ import java.io.File;
 import java.util.Scanner;
 import misc.Condicional;
 
-/**
- *
- * @author HP
- */
 public class MenuPacientes {
 
     Scanner sc=new Scanner(System.in);

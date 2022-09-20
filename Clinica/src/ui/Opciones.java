@@ -21,6 +21,7 @@ public class Opciones {
     } 
     public void Manipulador(){
         String opc,Expediente;
+        Almacen.Archivador();
         do{
         opciones();
         opc=sc.next();
