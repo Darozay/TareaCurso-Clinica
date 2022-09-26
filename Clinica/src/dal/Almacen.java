@@ -1,8 +1,9 @@
-package misc;
+package dal;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import misc.Condicional;
 
 public class Almacen {
     public static void Paciente(String string,String Archivo){

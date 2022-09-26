@@ -1,7 +1,6 @@
 package ui;
 
 import java.util.Scanner;
-import misc.Almacen;
 import misc.Condicional;
 
 public class Opciones {
@@ -21,7 +20,6 @@ public class Opciones {
     } 
     public void Manipulador(){
         String opc,Expediente;
-        Almacen.Archivador();
         do{
         opciones();
         opc=sc.next();
