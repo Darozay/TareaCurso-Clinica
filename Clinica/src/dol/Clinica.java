@@ -5,13 +5,13 @@ import misc.Servicio;
 
 public class Clinica {
     
-    Servicio[] pediatra=new Servicio[5];
-    Servicio[] gineco=new Servicio[6];
-    Servicio[] cardio=new Servicio[5];
-    Servicio[] derma=new Servicio[7];
-    Servicio[] gastro=new Servicio[5];
-    Servicio[] neuro=new Servicio[7];
-    Servicio[] radio=new Servicio[6];
+    private final Servicio[] pediatra=new Servicio[5];
+    private final Servicio[] gineco=new Servicio[6];
+    private final Servicio[] cardio=new Servicio[5];
+    private final Servicio[] derma=new Servicio[7];
+    private final Servicio[] gastro=new Servicio[5];
+    private final Servicio[] neuro=new Servicio[7];
+    private final Servicio[] radio=new Servicio[6];
     
     public Clinica(){
         pediatra[0]=new Servicio("1. Consulta externa",Doctores.Alberto,40);
@@ -62,26 +62,26 @@ public class Clinica {
         radio[4]=new Servicio("5. Telerradiografis",Doctores.Stuart,120);
         radio[5]=new Servicio("6. Densitometria osea",Doctores.Stuart,150);
     }
-    public String getPediatria(){
-        return Ordenador(pediatra);
+    public String getPediatria(boolean a){
+        return Ordenador(pediatra,a);
     }
-    public String getGinecoObstetricia(){
-        return Ordenador(gineco);
+    public String getGinecoObstetricia(boolean a){
+        return Ordenador(gineco,a);
     }
-    public String getCardiologia(){
-        return Ordenador(cardio);
+    public String getCardiologia(boolean a){
+        return Ordenador(cardio, a);
     }
-    public String getDermatologia(){
-        return Ordenador(derma);
+    public String getDermatologia(boolean a){
+        return Ordenador(derma,a);
     }
-    public String getGastroenterologia(){
-        return Ordenador(gastro);
+    public String getGastroenterologia(boolean a){
+        return Ordenador(gastro,a);
     }
-    public String getNeurologia(){
-        return Ordenador(neuro);
+    public String getNeurologia(boolean a){
+        return Ordenador(neuro,a);
     }
-    public String getRadiologia(){
-        return Ordenador(radio);
+    public String getRadiologia(boolean a){
+        return Ordenador(radio,a);
     }
     public int precioPediatra(int i){
         return pediatra[i].getPrecio();

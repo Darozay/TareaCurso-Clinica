@@ -4,10 +4,10 @@ import java.util.Scanner;
 import misc.Condicional;
 
 public class Menu implements IMenu{
-    Scanner sc=new Scanner(System.in);
-    MenuServicio a=new MenuServicio();
-    String v;
-    int cont;
+    private final Scanner sc=new Scanner(System.in);
+    private final MenuServicio a=new MenuServicio();
+    private String v;
+    private int cont;
     
     @Override
     public void Menu(){
@@ -41,7 +41,7 @@ public class Menu implements IMenu{
             }
         
         }
-        while(!"2".equals(opc));
+        while(!"3".equals(opc));
     }
     public String getPaciente(){
         if("".equals(v))return "No hizo uso de ningun servicio";

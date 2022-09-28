@@ -1,13 +1,14 @@
 package ui;
 
 import java.util.Scanner;
+import dal.Almacen;
 import misc.Condicional;
 
 public class Opciones {
     
-    Registro b=new Registro();
-    Scanner sc=new Scanner(System.in);
-    MenuPacientes g=new MenuPacientes();
+    private final Registro b=new Registro();
+    private final Scanner sc=new Scanner(System.in);
+    private final MenuPacientes g=new MenuPacientes();
     
     public void opciones(){
         System.out.println("_________________________________________________________________________________");
