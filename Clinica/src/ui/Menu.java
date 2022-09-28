@@ -4,15 +4,15 @@ import java.util.Scanner;
 import misc.Condicional;
 
 public class Menu implements IMenu{
-    Scanner sc=new Scanner(System.in);
-    MenuServicio a=new MenuServicio();
-    String v;
-    int cont;
+    private final Scanner sc=new Scanner(System.in);
+    private final MenuServicio a=new MenuServicio();
+    private String v;
+    private int cont;
     
     @Override
     public void Menu(){
         System.out.println("_________________________________________________________________________________");
-        System.out.print("1.Contratar servicion\n2.Salir\nEscoja la opcion deseada: ");
+        System.out.print("1.Contratar servicio\n2.Ver servicio\n3.Salir\nEscoja la opcion deseada: ");
     }
     
     @Override
@@ -20,6 +20,8 @@ public class Menu implements IMenu{
         cont=0;
         v="";
         String opc;
+        VerServicios b = new VerServicios();
+        OUTER:
         do{
         Menu();
         opc=sc.next();
@@ -30,12 +32,16 @@ public class Menu implements IMenu{
                     v=v+a.getPaciente();
                     cont=cont+a.getDeuda();
             }
-                case "2" -> System.out.println("¡Tenga buen dia!");
+                case "2" -> b.showMenu();
+                case "3" -> {
+                    System.out.println("Tenga un buen día");
+                    break OUTER;
+                }
                 default -> System.out.println("Opcion invalida");
             }
         
         }
-        while(!"2".equals(opc));
+        while(!"3".equals(opc));
     }
     public String getPaciente(){
         if("".equals(v))return "No hizo uso de ningun servicio";

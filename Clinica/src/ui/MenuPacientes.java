@@ -6,7 +6,7 @@ import misc.Condicional;
 
 public class MenuPacientes {
 
-    Scanner sc=new Scanner(System.in);
+    private final Scanner sc=new Scanner(System.in);
     
     public MenuPacientes() {
     }

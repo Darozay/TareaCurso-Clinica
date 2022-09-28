@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class Registro {
     
-    Paciente a=new Paciente();
-    Scanner sc=new Scanner(System.in);
+    private final Paciente a=new Paciente();
+    private final Scanner sc=new Scanner(System.in);
     private String dia,mes,año;
-    Menu b=new Menu();
-    String Expediente;
+    private final Menu b=new Menu();
+    private String Expediente;
     
     private void registroFecha(){
         System.out.println("_________________________________________________________________________________");

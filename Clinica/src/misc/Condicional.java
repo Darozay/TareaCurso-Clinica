@@ -7,13 +7,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Condicional {
-    public static String Ordenador(Servicio Array[]){
+    public static String Ordenador(Servicio Array[],boolean selector){
         String a="";
         int i=0;
         for(Servicio s: Array){
             a=a+Array[i].toString()+"\n";
             i++;
         }
+        if(selector==true) return a;
         return a+"servicio "+(Array.length+1)+". Para salir\n";
     }
     public static String Ficha(String string){
