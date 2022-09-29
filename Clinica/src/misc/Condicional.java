@@ -81,8 +81,8 @@ public class Condicional {
         File archivo=new File(Direccion(),string+".txt");
         if(!archivo.exists())System.out.println("El expediente que usted ingresó no existe");
         else{
-            archivo.delete();
-            System.out.println("Se borró el expediente "+string+" exitosamente");
+            if(archivo.delete())System.out.println("Se borró el expediente "+string+" exitosamente");
+            else EliminarTxt(string);
         }
     }
     
