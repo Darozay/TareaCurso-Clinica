@@ -15,7 +15,7 @@ public class Condicional {
             i++;
         }
         if(selector==true) return a;
-        return a+"servicio "+(Array.length+1)+". Para salir\n";
+        return a+"Servicio "+(Array.length+1)+". Volver\n";
     }
     public static String Ficha(String string){
         String b="-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n";
@@ -79,10 +79,10 @@ public class Condicional {
     }
     public static void EliminarTxt(String string){
         File archivo=new File(Direccion(),string+".txt");
-        if(!archivo.exists())System.out.println("El expediente que usted ingreso no existe");
+        if(!archivo.exists())System.out.println("El expediente que usted ingresó no existe");
         else{
             archivo.delete();
-            System.out.println("Se borro el expediente "+string+" exitosamente");
+            System.out.println("Se borró el expediente "+string+" exitosamente");
         }
     }
     

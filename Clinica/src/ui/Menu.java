@@ -11,8 +11,13 @@ public class Menu implements IMenu{
     
     @Override
     public void Menu(){
-        System.out.println("_________________________________________________________________________________");
-        System.out.print("1.Contratar servicio\n2.Ver servicio\n3.Salir\nEscoja la opcion deseada: ");
+        System.out.println("++++++++++++++++++++++++++++");
+        System.out.println("1.Contratar servicio");
+        System.out.println("2.Ver servicio");
+        System.out.println("3.Volver");
+        System.out.println("++++++++++++++++++++++++++++++");
+        System.out.print("Escoja la opción deseada: ");
+               
     }
     
     @Override
@@ -25,7 +30,7 @@ public class Menu implements IMenu{
         do{
         Menu();
         opc=sc.next();
-        if( null == opc)System.out.println("Opcion invalida");
+        if( null == opc)System.out.println("Opción invalida");
         else switch (opc) {
                 case "1" -> {
                     a.showMenu();
@@ -37,7 +42,7 @@ public class Menu implements IMenu{
                     System.out.println("Tenga un buen día");
                     break OUTER;
                 }
-                default -> System.out.println("Opcion invalida");
+                default -> System.out.println("Opción invalida");
             }
         
         }
