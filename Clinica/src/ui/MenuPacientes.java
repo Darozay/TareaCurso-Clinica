@@ -12,7 +12,7 @@ public class MenuPacientes {
     }
     
     public void Menu() {
-        System.out.println("_________________________________________________________________________________");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("1.Buscar paciente en especifico");
         System.out.println("2.Buscar pacientes");
         System.out.println("3.Volver");
