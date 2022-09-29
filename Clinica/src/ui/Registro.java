@@ -24,7 +24,8 @@ public class Registro {
         System.out.print("Ingrese el año(se espera un año de 4 digitos): ");
         año=sc.next();
         a.setAño(año);
-        if("La fecha que ingreso es invalida".equals(a.Edad()))System.out.println("Ingrese una fecha valida");
+        if("La fecha que ingreso es invalida".equals(a.Edad()))
+            System.out.println("Ingrese una fecha valida");
         }while("La fecha que ingreso es invalida".equals(a.Edad()));
     }
     private void registroGenero(){
@@ -33,7 +34,8 @@ public class Registro {
         do{
             System.out.print("Ingrese su genero: ");
             a.genero(sc.next());
-            if("Ingrese un genero valido\nMaculino\nFemenino".equals(a.getGenero()))System.out.println("Ingrese un genero valido");
+            if("Ingrese un genero valido\nMaculino\nFemenino".equals(a.getGenero()))
+                System.out.println("Ingrese un genero valido");
         }while("Ingrese un genero valido\nMaculino\nFemenino".equals(a.getGenero()));
     }
     public String getPaciente(){
@@ -44,19 +46,19 @@ public class Registro {
     }
     public void registroPersona(String expediente,boolean existe){
         System.out.println("_________________________________________________________________________________");
-        System.out.print("Ingrese el primer nombre: ");
+        System.out.print("Primer nombre: ");
         a.setpNombre(sc.next());
         
-        System.out.print("Ingrese el segundo nombre: ");
+        System.out.print("Segundo nombre: ");
         a.setsNombre(sc.next());
         
-        System.out.print("Ingrese el primer apellido: ");
+        System.out.print("Primer apellido: ");
         a.setpApellido(sc.next());
         
-        System.out.print("Ingrese el segundo apellido: ");
+        System.out.print("Segundo apellido: ");
         a.setsApellido(sc.next());
         
-        System.out.print("Ingrese el DNI: ");
+        System.out.print("Ingrese el numero de cedula: ");
         a.setDNI(sc.next());
         
         registroFecha();

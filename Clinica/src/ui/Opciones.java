@@ -11,13 +11,14 @@ public class Opciones {
     private final MenuPacientes g=new MenuPacientes();
     
     public void opciones(){
-        System.out.println("_________________________________________________________________________________");
+        System.out.println("+++++++++++++++++++Bienvenido al Sistema Clinico Vida Sana+++++++++++++++++++");
         System.out.println("1.Agregar paciente");
         System.out.println("2.Editar paciente");
         System.out.println("3.Ver paciente");
-        System.out.println("4.Eleminar paciente");
+        System.out.println("4.Eliminar paciente");
         System.out.println("5.Salir");
-        System.out.print("Usted selecciono: ");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.print("Usted seleccionó: ");
     } 
     public void Manipulador(){
         String opc,Expediente;
