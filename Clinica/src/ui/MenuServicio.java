@@ -39,7 +39,11 @@ public class MenuServicio implements IMenu {
                 switch (opc) {
                     case "1" -> {
                         System.out.print(a.getPediatria(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=6){
                             if(select<1 || select>6){
                                 System.out.println("Usted no escogio una opcion valida");
@@ -52,7 +56,11 @@ public class MenuServicio implements IMenu {
                     }
                     case "2" -> {
                         System.out.print(a.getGinecoObstetricia(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=7){
                             if(select<1 || select>7){
                                 System.out.println("Usted no escogio una opcion valida");
@@ -65,7 +73,11 @@ public class MenuServicio implements IMenu {
                     }
                     case "3" -> {
                         System.out.print(a.getCardiologia(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=6){
                           if(select<1 || select>6){
                               System.out.println("Usted no escogio una opcion valida");
@@ -78,7 +90,11 @@ public class MenuServicio implements IMenu {
                     }
                     case "4" -> {
                         System.out.print(a.getDermatologia(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=8){
                             if(select<1 || select>8){
                                 System.out.println("Usted no escogio una opcion valida");
@@ -91,7 +107,11 @@ public class MenuServicio implements IMenu {
                     }
                     case "5" -> {
                         System.out.print(a.getGastroenterologia(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=6){
                             if(select<1 || select>6){
                                 System.out.println("Usted no escogio una opcion valida");
@@ -104,7 +124,11 @@ public class MenuServicio implements IMenu {
                     }
                     case "6" -> {
                         System.out.print(a.getNeurologia(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=8){
                             if(select<1 || select>8){
                                 System.out.println("Usted no escogio una opcion valida");
@@ -117,7 +141,11 @@ public class MenuServicio implements IMenu {
                     }
                     case "7" -> {
                         System.out.print(a.getRadiologia(false)+"Escoja el servicio medico: ");
+                        try{
                         select=sc.nextInt();
+                        }catch(Exception e){
+                        select=-1;
+                        }
                         if(select!=7){
                             if(select<1 || select>7){
                                 System.out.println("Usted no escogio una opcion valida");

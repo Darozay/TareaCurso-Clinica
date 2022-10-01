@@ -7,7 +7,7 @@ import misc.Condicional;
 
 public class Almacen {
     public static void Paciente(String string,String Archivo){
-        File archivo=new File(Condicional.Direccion(),Archivo+".txt");
+        File archivo =new File(Condicional.Direccion(),Archivo+".txt");
         if(!archivo.exists()){
             try{
             archivo.createNewFile();
